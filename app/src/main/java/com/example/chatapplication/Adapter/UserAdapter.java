@@ -29,10 +29,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
     }
     @NonNull
     @Override
-//    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-//        View view= LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
-//        return new UserAdapter.ViewHolder(view);
-//    }
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext).inflate(R.layout.user_item, parent, false);
         return new UserAdapter.ViewHolder(view);
@@ -49,14 +45,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             Glide.with(mContext).load(user.getImageURL()).into(holder.profile_image);
         }
 
-//        holder.itemView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(mContext, MessageActivity.class);
-//                intent.putExtra("userid", user.getId());
-//                mContext.startActivity(intent);
-//            }
-//        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -82,8 +70,6 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
 
             username = itemView.findViewById(R.id.username);
             profile_image= itemView.findViewById(R.id.profile_image);
-
-
         }
     }
 }
